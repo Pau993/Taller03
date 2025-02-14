@@ -1,6 +1,6 @@
 # Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión 💯
 
-En este taller se realizó la contrucción de un servidor Web, tipo apache en java, el cual es capaz de entrregar páginas HTML e imagenes tipo PNG.
+En este taller se realizó la contrucción de un servidor Web, tipo apache en java, el cual es capaz de entregar páginas HTML e imagenes tipo PNG.
 
 
 ## Descripción de la aplicación 📖
@@ -11,38 +11,37 @@ La aplicación es ideal para comprender los fundamentos del desarrollo de framew
 
 ## Diagrama de Arquitectura 📊
 
-* Usuario (User):
+Este diagrama representa la arquitectura de un servidor HTTP desarrollado en Java sin frameworks web. A continuación, te explico los principales componentes y su interacción:
 
-Es quien realiza solicitudes HTTP a través de un navegador web.
-* Navegador (Browser):
+* Usuario (User): Representa al cliente que accede a los recursos del servidor a través de un navegador web.
 
-Actúa como intermediario entre el usuario y el servidor HTTP.
-Realiza solicitudes HTTP al servidor en busca de recursos como archivos HTML, JavaScript, CSS o imágenes.
-* Servidor HTTP (HttpServer):
+* Navegador (Browser): Solicita diferentes recursos al servidor HTTP. Estas solicitudes incluyen:
 
-Es el servidor que recibe y procesa las solicitudes HTTP enviadas por el navegador.
-Se encuentra dentro de un "grupo genérico", lo que indica que puede formar parte de una infraestructura más amplia.
+Archivos estáticos como index.html, script.js, estilos.css e imágenes (Imagen/Chill.jpg).
+Endpoints dinámicos como /pi y /greeting.
+Servidor HTTP (HttpServer): Maneja las solicitudes entrantes y sirve los recursos solicitados. Depende de un módulo llamado Utils, que posiblemente se encarga de procesar las solicitudes y gestionar las respuestas.
 
-El navegador envía varias solicitudes HTTP al servidor en el puerto 35000 para diferentes rutas:
+Módulo Utils: Parece ser una capa intermedia que ayuda al HttpServer a procesar y responder a las solicitudes. Este módulo podría encargarse de:
 
-* /script.js: Solicitud para obtener un archivo de JavaScript.
-* /index.html: Solicitud para cargar el archivo principal de la página web.
-* /estilos.css: Solicitud para cargar el archivo de estilos CSS.
-* /Imagen/Chill.jpg: Solicitud para obtener una imagen ubicada en una ruta específica.
-* Recursos (Archivos estáticos): Almacenados en el servidor, servidos a través de rutas específicas.
+* Manejo de rutas.
+* Procesamiento de datos.
+* Conversión de respuestas.
+* Recursos: Representan servidores o bases de datos que el HttpServer consulta para obtener información y responder adecuadamente a las solicitudes.
 
-El servidor procesa estas solicitudes y responde con los recursos correspondientes desde su sistema de archivos.
+* Comunicación HTTP: Indica que el HttpServer interactúa con servicios externos a través de HTTP, posiblemente para obtener datos adicionales.
 
-* Servidor HTTP: Clase HttpServer que maneja solicitudes HTTP.
-* Manejo de rutas: Clase Route para mapear rutas específicas a manejadores.
-* Clases de soporte:
-* Request y Response para manejar y estructurar las solicitudes y respuestas.
-* Utils con funciones auxiliares
-* Archivos estáticos: Recursos en la carpeta resources/Files (HTML, CSS, imágenes, etc.).
-* API REST: Endpoints definidos en HttpServer para manejar /api/saludo, /api/fecha, etc.
-* Pruebas: Clases de prueba con JUnit para validar el comportamiento del servidor.
+* Flujo de trabajo:
+El usuario accede al navegador y solicita una URL (http://<Server>:35000/index.html).
+El navegador envía la petición al HttpServer.
+* HttpServer procesa la solicitud con ayuda del módulo Utils:
+Si es un archivo estático, lo busca y lo devuelve.
+Si es una solicitud dinámica (/pi o /greeting), podría consultar recursos externos antes de generar la respuesta.
+Si la solicitud requiere comunicación con otro servicio, HttpServer envía una petición HTTP a los Recursos y espera la respuesta.
+Finalmente, HttpServer devuelve el contenido solicitado al navegador.
 
 ![image](https://github.com/user-attachments/assets/1c4560c7-ee88-4666-9ff4-5154bec0710d)
+
+Este diagrama describe un servidor HTTP básico capaz de manejar solicitudes de archivos estáticos y procesar peticiones dinámicas con ayuda de un módulo intermedio (Utils). Además, puede comunicarse con servicios externos para obtener información adicional.
 
 ## Diagrama de Clase 📊
 
