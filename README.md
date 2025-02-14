@@ -30,7 +30,6 @@ El navegador envía varias solicitudes HTTP al servidor en el puerto 35000 para 
 * /estilos.css: Solicitud para cargar el archivo de estilos CSS.
 * /Imagen/Chill.jpg: Solicitud para obtener una imagen ubicada en una ruta específica.
 * Recursos (Archivos estáticos): Almacenados en el servidor, servidos a través de rutas específicas.
-* Comunicación: Protocolo HTTP entre el cliente y el servidor.
 
 El servidor procesa estas solicitudes y responde con los recursos correspondientes desde su sistema de archivos.
 
