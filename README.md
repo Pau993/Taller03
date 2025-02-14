@@ -1,4 +1,4 @@
-# Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión
+# Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión 💯
 
 En este taller se realizó la contrucción de un servidor Web, tipo apache en java, el cual es capaz de entrregar páginas HTML e imagenes tipo PNG.
 
@@ -9,7 +9,7 @@ La aplicación es un microframework en Java que configura y ejecuta un servidor 
 
 La aplicación es ideal para comprender los fundamentos del desarrollo de frameworks web para servicios REST, permitiendo manejar parámetros de consulta, definir servicios REST y gestionar archivos estáticos.
 
-## Diagrama de Arquitectura
+## Diagrama de Arquitectura 📊
 
 * Usuario (User):
 
@@ -45,8 +45,7 @@ El servidor procesa estas solicitudes y responde con los recursos correspondient
 
 ![image](https://github.com/user-attachments/assets/ee3336ae-1ca3-40f2-883f-e43ccb439cce)
 
-
-## Diagrama de Clase
+## Diagrama de Clase 📊
 
 Este diagrama de clases representa la arquitectura de un microframework para servicios REST, dividiendo la funcionalidad en varias clases e interfaces.
 
@@ -92,7 +91,7 @@ mvn exec:java -Dexec.mainClass="com.example.HttpServer"
 ```
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
 
-## Ver la Aplicación:
+## Ver la Aplicación: 💿
 
 Diríjase a http://localhost:35000/ en su navegador para ver la aplicación en funcionamiento
 
@@ -107,7 +106,7 @@ mvn test
 ```
 ![image](https://github.com/user-attachments/assets/acc5fdc4-897f-492d-96b2-7de303b742da)
 
-## Descripción de las pruebas
+## Descripción de las pruebas ✏️
 
 * testHandleApiRequestSaludo 🛠️
 
@@ -122,26 +121,28 @@ Comprueba que una ruta inexistente, como /api/desconocido, devuelve HTTP 404 Not
 
 Evalúa que una solicitud POST a /api/enviar con un cuerpo JSON sea procesada correctamente y responda con HTTP 200 OK y el mensaje
 
-* testHandleApiRequestHello
+* testHandleApiRequestHello ✏️
 
 Esta prueba verifica que el servidor HTTP maneje correctamente una solicitud a la ruta "/api/hello".
 
-* testHandleApiRequestPi
+* testHandleApiRequestPi ✏️
 
 Esta prueba verifica que la solicitud al método greeting del controlador GreetingController con un parámetro name devuelve un saludo personalizado.
 
-* testHandleApiRequestGreeting
+* testHandleApiRequestGreeting ✏️
 
 Estas pruebas aseguran que los métodos del controlador GreetingController están devolviendo las respuestas correctas cuando se les pasa un parámetro específico.
 
 ## Características principales: ⚙️
 
-1. Interfaz moderna y responsiva:
+1. Interfaz moderna y responsiva: 💎
 
-* Un diseño minimalista con un esquema de colores que incluye degradados de tonos morados, creando una experiencia visual sofisticada.
-* Totalmente adaptable a diferentes dispositivos gracias a su diseño responsivo.
-* Panel de busqueda de archivos, el cual permite leer cualquier tipo de archivo localmente.
-  
+* Interfaz Moderna y Responsiva:
+* Diseño minimalista con un esquema de colores sofisticado.
+* Adaptable a diferentes dispositivos gracias a su diseño responsivo.
+* Gestión de Archivos:
+* Botones interactivos para abrir y visualizar archivos clave como JavaScript, CSS, HTML e imágenes.
+
 2. Gestión de archivos: ⚙️
 
 * Incluye botones interactivos que permiten abrir y visualizar archivos clave como:
@@ -151,14 +152,6 @@ Estas pruebas aseguran que los métodos del controlador GreetingController está
 * Imágenes (Chill.jpg).
 
 # Muestra de la aplicación 🧩
-
-## Características principales:
-
-Interfaz Moderna y Responsiva:
-Diseño minimalista con un esquema de colores sofisticado.
-Adaptable a diferentes dispositivos gracias a su diseño responsivo.
-Gestión de Archivos:
-Botones interactivos para abrir y visualizar archivos clave como JavaScript, CSS, HTML e imágenes.
 
 https://github.com/user-attachments/assets/228f71e7-3696-413b-8d8a-b19b412c0104
 
