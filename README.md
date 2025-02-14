@@ -42,7 +42,7 @@ El servidor procesa estas solicitudes y responde con los recursos correspondient
 * API REST: Endpoints definidos en HttpServer para manejar /api/saludo, /api/fecha, etc.
 * Pruebas: Clases de prueba con JUnit para validar el comportamiento del servidor.
 
-![image](https://github.com/user-attachments/assets/ee3336ae-1ca3-40f2-883f-e43ccb439cce)
+![image](https://github.com/user-attachments/assets/1c4560c7-ee88-4666-9ff4-5154bec0710d)
 
 ## Diagrama de Clase 📊
 
