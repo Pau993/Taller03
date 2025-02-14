@@ -105,8 +105,7 @@ Las pruebas realizadas en este proyecto se enfocan en la validación y verificac
 ```
 mvn test
 ```
-![image](https://github.com/user-attachments/assets/d51f5c64-3d0b-4b87-bec3-d6c058bc4675)
-
+![image](https://github.com/user-attachments/assets/acc5fdc4-897f-492d-96b2-7de303b742da)
 
 ## Descripción de las pruebas
 
@@ -125,6 +124,12 @@ Evalúa que una solicitud POST a /api/enviar con un cuerpo JSON sea procesada co
 
 * testHandleApiRequestHello
 Esta prueba verifica que el servidor HTTP maneje correctamente una solicitud a la ruta "/api/hello".
+
+* testHandleApiRequestPi
+Esta prueba verifica que la solicitud al método greeting del controlador GreetingController con un parámetro name devuelve un saludo personalizado.
+
+* testHandleApiRequestGreeting
+Estas pruebas aseguran que los métodos del controlador GreetingController están devolviendo las respuestas correctas cuando se les pasa un parámetro específico.
 
 ## Características principales: ⚙️
 
