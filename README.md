@@ -123,12 +123,15 @@ Comprueba que una ruta inexistente, como /api/desconocido, devuelve HTTP 404 Not
 Evalúa que una solicitud POST a /api/enviar con un cuerpo JSON sea procesada correctamente y responda con HTTP 200 OK y el mensaje
 
 * testHandleApiRequestHello
+
 Esta prueba verifica que el servidor HTTP maneje correctamente una solicitud a la ruta "/api/hello".
 
 * testHandleApiRequestPi
+
 Esta prueba verifica que la solicitud al método greeting del controlador GreetingController con un parámetro name devuelve un saludo personalizado.
 
 * testHandleApiRequestGreeting
+
 Estas pruebas aseguran que los métodos del controlador GreetingController están devolviendo las respuestas correctas cuando se les pasa un parámetro específico.
 
 ## Características principales: ⚙️
